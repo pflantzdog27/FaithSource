@@ -1,0 +1,249 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+.isotope-item {
+  z-index: 2; }
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1; }
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s; }
+
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width; }
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity; }
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s; }
+
+/***  Box Shadows  ***/
+/***  Transitions  ***/
+/***  Scale  ***/
+/***  Radius  ***/
+#header-container {
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 9; }
+  #header-container #auburn-header {
+    width: 100%;
+    height: 25px;
+    background: #eaeaea;
+    overflow: hidden;
+    position: relative; }
+    #header-container #auburn-header span {
+      position: absolute;
+      bottom: 1px;
+      color: #555555; }
+    #header-container #auburn-header #auburn-logo {
+      -webkit-transform: scale(0.25, 0.25);
+      -moz-transform: scale(0.25, 0.25);
+      -o-transform: scale(0.25, 0.25);
+      -ms-transform: scale(0.25, 0.25);
+      transform: scale(0.25, 0.25);
+      margin-top: -37px; }
+
+#main-nav {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: #cccccc;
+  overflow: hidden;
+  padding-top: 42px;
+  min-height: 0; }
+  #main-nav ul {
+    display: none;
+    padding: 8px 0 0;
+    /*.active {
+      background: $activeNavBG;
+        a {
+          background: $activeNavBG;
+        }
+    }*/ }
+    #main-nav ul li {
+      text-align: left;
+      border-bottom: 1px solid #999;
+      list-style: none;
+      -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      padding: 7px 0;
+      cursor: pointer; }
+      #main-nav ul li a {
+        color: #2990ff;
+        background: #cccccc;
+        font-weight: bold;
+        font-size: 1.3em; }
+  #main-nav #mobile-menu {
+    position: absolute;
+    right: 10px;
+    top: 8px; }
+
+.content header {
+  margin-bottom: 25px; }
+.content .home-section {
+  border-bottom: 1px dotted #cccccc;
+  padding: 25px 0; }
+  .content .home-section:first-child {
+    padding-top: 0; }
+
+#content-home {
+  padding-top: 0; }
+  #content-home .home-section:first-child {
+    padding-top: 25px; }
+
+#content-inner {
+  padding-top: 0; }
+  #content-inner .right-column ul {
+    padding-left: 20px; }
+  #content-inner .center-column {
+    border-right: 1px solid #cccccc; }
+
+.form-wrap #contact-form .form-group {
+  margin-bottom: 15px; }
+  .form-wrap #contact-form .form-group span {
+    position: absolute;
+    right: 20px;
+    top: 10%;
+    color: red;
+    font-size: 8px; }
+.form-wrap .alert-success {
+  display: none; }
+
+.expert-excerpt {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  cursor: pointer;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .expert-excerpt figure {
+    width: 70%;
+    max-width: 70%;
+    margin: 0 auto; }
+    .expert-excerpt figure img {
+      border: 10px solid #cccccc;
+      margin: 0 auto; }
+    .expert-excerpt figure figcaption {
+      text-align: center;
+      padding: 5px 0; }
+  .expert-excerpt:hover {
+    background: whitesmoke; }
+
+.right-column h4 {
+  margin-top: 0; }
+
+#sort-nav .filter-group > a {
+  background: white;
+  position: relative; }
+  #sort-nav .filter-group > a span {
+    position: absolute;
+    right: 10px;
+    top: 50%; }
+#sort-nav .filter-group .dropdown-menu {
+  padding: 0;
+  margin: 0 14px; }
+#sort-nav .selected {
+  background: red; }
+
+.single-main figure {
+  float: left;
+  max-width: 100%; }
+  .single-main figure figcaption {
+    margin-top: 10px; }
+
+.media {
+  margin-top: 0; }
+
+.panel {
+  margin-bottom: 10px; }
+  .panel .panel-heading {
+    cursor: pointer;
+    position: relative; }
+    .panel .panel-heading span {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      font-size: 1em;
+      margin-top: -.5em;
+      color: #999; }
+  .panel .odd-faq {
+    background: #cccccc; }
+  .panel .panel-body {
+    display: none; }
+
+@media (min-width: 768px) {
+  /* small */
+  #main-nav {
+    padding-top: 0; }
+    #main-nav ul {
+      display: block;
+      padding-top: 0;
+      padding-bottom: 0; }
+      #main-nav ul li {
+        padding-bottom: 50px;
+        text-align: center;
+        border: 0; }
+
+  #header-container {
+    position: fixed; }
+    #header-container #auburn-header {
+      height: 100px; }
+      #header-container #auburn-header span {
+        opacity: 0; }
+      #header-container #auburn-header #auburn-logo {
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+        margin-top: 0; }
+
+  #content-home {
+    padding-top: 235px; }
+
+  #content-inner {
+    padding-top: 175px; } }
+@media (min-width: 992px) {
+  /* medium */
+  #main-nav li {
+    padding-bottom: 50px; }
+    #main-nav li a {
+      line-height: 2;
+      padding-top: 15px;
+      padding-bottom: 15px; }
+  #main-nav .about {
+    background: url("../images/slide-wee.svg") no-repeat 50% 100%; }
+  #main-nav .experts {
+    background: url("../images/slide-wee.svg") no-repeat 50% 100%; }
+  #main-nav .news {
+    background: url("../images/slide-wee.svg") no-repeat 50% 100%; }
+  #main-nav .voice {
+    background: url("../images/slide-wee.svg") no-repeat 50% 100%; } }
+@media (min-width: 1200px) {
+  /* large */ }

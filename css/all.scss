@@ -1,0 +1,330 @@
+@import "isotope-default";
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
+/***  Box Shadows  ***/
+//***********************************************
+@mixin box-shadow($dimensions, $color) {
+  -webkit-box-shadow: $dimensions $color;
+  -moz-box-shadow:    $dimensions $color;
+  box-shadow:         $dimensions $color;
+}
+
+/***  Transitions  ***/
+//***********************************************
+@mixin transition($property, $time) {
+  -o-transition: $property $time ease;
+  -ms-transition: $property $time ease;
+  -moz-transition: $property $time ease;
+  -webkit-transition: $property $time ease;
+  transition: $property $time ease;
+}
+
+/***  Scale  ***/
+//***********************************************
+@mixin scale($x,$y){
+  -webkit-transform:  scale($x,$y);
+  -moz-transform:  scale($x,$y);
+  -o-transform:  scale($x,$y);
+  -ms-transform:  scale($x,$y);
+  transform:  scale($x,$y);
+}
+
+/***  Radius  ***/
+//***********************************************
+@mixin border-radius($radius){
+  -webkit-border-radius:  $radius;
+  -moz-border-radius:  $radius;
+  border-radius:  $radius;
+}
+
+// Header Variables
+$auburnHeaderHeight : 100px;
+$scrollToNavPadding : 50px;
+$auburnHeaderColor : #eaeaea;
+$auburnLogoText : #555;
+$mainNavColor : #ccc;
+$iconAbout : '../images/slide-wee.svg';
+$iconExperts : '../images/slide-wee.svg';
+$iconNews : '../images/slide-wee.svg';
+$iconVoice : '../images/slide-wee.svg';
+$navItemColor : #2990ff;
+$activeNavBG : #999;
+
+
+// Home Sections Variables
+$sectionBorder : 1px dotted $mainNavColor;
+
+// Expert Variables
+$imgBorder : $mainNavColor;
+$hoverExpertBG : #f5f5f5;
+
+// Expert Filter Variables
+$filterGroupBG : #fff;
+$filterSelectedBG : #ff0000;
+
+// FAQ
+$oddItemBG  : #ccc;
+
+
+
+//HEADER
+#header-container {
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index:9;
+    #auburn-header {
+      width: 100%;
+      height: 25px;
+      background: $auburnHeaderColor;
+      overflow: hidden;
+      position: relative;
+        span {
+          position: absolute;
+          bottom: 1px;
+          color: $auburnLogoText;
+        }
+      #auburn-logo {
+       @include scale(.25,.25);
+        margin-top: -37px;
+      }
+    }
+}
+
+// Navigation
+#main-nav {
+  @include border-radius(0);
+  background: $mainNavColor;
+  overflow: hidden;
+  padding-top: 42px;
+  min-height: 0;
+    ul {
+      display: none;
+      padding: 8px 0 0;
+        li{
+          text-align: left;
+          border-bottom: 1px solid #999;
+          list-style: none;
+          @include transition(all,0.5s);
+          padding: 7px 0;
+          cursor: pointer;
+            a {
+              color: $navItemColor;
+              background: $mainNavColor;
+              font : {
+                weight: bold;
+                size: 1.3em;
+              }
+            }
+        }
+        /*.active {
+          background: $activeNavBG;
+            a {
+              background: $activeNavBG;
+            }
+        }*/
+    }
+    #mobile-menu {
+      position: absolute;
+      right: 10px;
+      top: 8px;
+    }
+}
+
+// Content
+.content {
+    header {
+      margin-bottom: 25px;
+    }
+    .home-section {
+      border-bottom: $sectionBorder;
+      padding: 25px 0;
+        &:first-child{
+          padding-top: 0;
+        }
+    }
+}
+#content-home {
+  padding-top: 0;
+     .home-section:first-child {
+       padding-top: 25px;
+     }
+}
+#content-inner {
+  padding-top: 0;
+    .right-column {
+      //
+        ul {
+          padding-left: 20px;
+        }
+    }
+    .center-column {
+      border-right: 1px solid $mainNavColor;
+    }
+}
+
+// Contact Form
+.form-wrap {
+      #contact-form {
+            .form-group{
+              margin-bottom: 15px;
+                span {
+                  position: absolute;
+                  right: 20px;
+                  top: 10%;
+                  color: red;
+                  font-size: 8px;
+                }
+            }
+      }
+      .alert-success {
+        display: none;
+      }
+}
+
+// Expert Lists
+.expert-excerpt {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  cursor: pointer;
+  @include transition(all,0.3s);
+      figure {
+        width: 70%;
+        max-width: 70%;
+        margin: 0 auto;
+          img {
+            border: 10px solid $imgBorder;
+            margin: 0 auto;
+          }
+          figcaption {
+            text-align: center;
+            padding: 5px 0;
+          }
+      }
+  &:hover {
+    background: $hoverExpertBG;
+  }
+}
+
+// SIDEBAR
+.right-column {
+      h4 {
+        margin-top: 0;
+      }
+}
+
+// Expert Filter
+#sort-nav {
+    .filter-group {
+      //
+        > a {
+          background: $filterGroupBG;
+          position: relative;
+            span {
+              position: absolute;
+              right: 10px;
+              top: 50%;
+            }
+        }
+        .dropdown-menu {
+          padding: 0;
+          margin: 0 14px;
+        }
+    }
+    .selected {
+      background: $filterSelectedBG;
+    }
+}
+
+// SINGLE POST PAGE
+.single-main {
+      figure {
+        float: left;
+        max-width: 100%;
+          figcaption {
+            margin-top: 10px;
+          }
+      }
+}
+
+// NEWS
+.media {
+  margin-top: 0;
+}
+
+// FAQ Page
+.panel {
+  margin-bottom: 10px;
+    .panel-heading {
+      cursor: pointer;
+      position: relative;
+        span {
+          position: absolute;
+          right: 5px;
+          top: 50%;
+          font-size: 1em;
+          margin-top: -.5em;
+          color: #999;
+        }
+    }
+    .odd-faq {
+      background: $oddItemBG;
+    }
+    .panel-body {
+      display: none;
+    }
+}
+// MEDIA QUERIES
+@media(min-width:768px){ /* small */
+  #main-nav {
+    padding-top: 0;
+    ul {
+      display: block;
+      padding-top: 0;
+      padding-bottom: 0;
+        li {
+          padding-bottom: 50px;
+          text-align: center;
+          border: 0;
+        }
+    }
+  }
+  #header-container {
+    position: fixed;
+      #auburn-header {
+        height: $auburnHeaderHeight;
+          span {
+            opacity: 0;
+          }
+          #auburn-logo {
+            @include scale(1,1);
+            margin-top: 0;
+          }
+      }
+  }
+  #content-home {
+    padding-top: $auburnHeaderHeight + $scrollToNavPadding + 85;
+  }
+  #content-inner {
+    padding-top: 175px;
+  }
+}
+@media(min-width:992px){ /* medium */
+  #main-nav {
+    li {
+      padding-bottom: $scrollToNavPadding;
+      a {
+        line-height: 2;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+    .about{ background: url($iconAbout)no-repeat 50% 100%;}
+    .experts{ background: url($iconExperts)no-repeat 50% 100%;}
+    .news{ background: url($iconNews)no-repeat 50% 100%;}
+    .voice{ background: url($iconVoice)no-repeat 50% 100%;}
+  }
+}
+@media(min-width:1200px){ /* large */
+
+}
